@@ -142,14 +142,14 @@
     padding-top: 1rem;
   }
 
-  .about-header {
-    font-size: 1.6rem; /* adjust if your .main-header base size differs */
+  /* .about-header {
+    font-size: 1.6rem; 
   }
 
   .about-text {
     font-size: 0.9rem;
     line-height: 1.7;
-  }
+  } */
 
   .intro-vid video {
     height: 220px;
