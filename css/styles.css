@@ -40,7 +40,7 @@ p2 {
   left: 50%;
   transform: translate(-50%, -20px);
 
-  width: 60%;
+  width: 69%;
   max-width: 1200px;
   height: var(--nav-height);
 
@@ -95,7 +95,8 @@ p2 {
 }
 
 .btn-desktop-only{
-font-size: 14px;
+  font-size: 14px;
+  padding: 10px 12px;
 }
 
 .nav-links a:hover {
@@ -380,6 +381,247 @@ font-size: 14px;
 
 
 
+/*24 HOUR SERVICES*/
+.emergency {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 5%;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+
+.emergency-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 1%;
+  background-color: var(--color-light);
+}
+
+.emergency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(2, 61, 12, 0.35);
+  background: rgba(38, 233, 70, 0.12);
+  font-family: var(--font-overline);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #017919;
+  margin-bottom: 1.5rem;
+}
+
+.emergency-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #27d105;
+  animation: emergency-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes emergency-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+.emergency-title {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--color-silver);
+  margin-bottom: 1rem;
+}
+
+.emergency-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emergency-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.emergency-list span {
+  padding: 0.5rem 1rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 20px;
+  font-family: var(--font-overline);
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--color-silver);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.emergency-list span:hover {
+  border-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.emergency-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.25rem;
+  background: white;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-family: var(--font-overline);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.emergency-call-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.emergency-call-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  transform: scale(1.03);
+}
+
+/* .emergency {
+  position: relative;
+  background: var(--color-white);
+  padding: 3rem 5%;
+  text-align: center;
+
+}
+
+.emergency-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.emergency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(10, 99, 2, 0.4);
+  background: rgba(38, 233, 70, 0.1);
+  font-family: var(--font-overline);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: green;
+  margin-bottom: 1.75rem;
+}
+
+.emergency-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #27d105;
+  animation: emergency-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes emergency-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+.emergency-title {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+  color: var(--color-silver);
+  margin-bottom: 1.25rem;
+}
+
+.emergency-text {
+  font-family: var(--font-overline);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color:var(--color-dark);
+  margin-bottom: 2.5rem;
+}
+
+.emergency-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2.75rem 0 2.75rem 0;
+}
+
+.emergency-list span {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(59, 59, 59, 0.15);
+  background-color: var(--color-white) ;
+  border-radius: 20px;
+  font-family: var(--font-overline);
+  letter-spacing:0.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--color-silver);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.emergency-list span:hover {
+  border-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.emergency-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.25rem;
+  background:rgb(226, 193, 4);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  color: var(--color-silver);
+  text-decoration: none;
+  font-family: var(--font-overline);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.emergency-call-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.emergency-call-btn:hover {
+  background: transparent;
+  transform: scale(1.03);
+} */
+
 
 /*OUR SERVICES*/
 .services {
@@ -416,6 +658,7 @@ font-size: 14px;
   gap: 2.5rem;
   border-bottom: 1px solid rgba(59, 59, 59, 0.15);
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .tab-btn {
@@ -1651,8 +1894,8 @@ font-size: 14px;
   bottom: 24px;
   right: 24px;
 
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
 
   display: flex;
   align-items: center;
@@ -1682,8 +1925,8 @@ font-size: 14px;
 
 
 .whatsapp-float svg {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 
@@ -1711,6 +1954,8 @@ font-size: 14px;
 
   opacity: 0;
   pointer-events: none;
+
+  margin-right: 0.5rem;
 
   transition: all 0.3s ease;
 }
