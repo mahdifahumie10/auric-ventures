@@ -109,6 +109,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  .intro-vid video {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-vid video {
+    height: 220px;
+    padding-top: 1.25rem;
+  }
+}
+
 
 /*SERVICES*/
 @media (max-width: 768px) {
