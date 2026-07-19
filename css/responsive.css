@@ -109,7 +109,22 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .edge-label-left {
+    display: none;
+  }
+
+  .intro-vid {
+    display: flex;
+    justify-content: center; /* centers the video once it's stacked below the text */
+  }
+
   .intro-vid video {
     width: 100%;
     max-width: 500px;
@@ -119,6 +134,23 @@
 }
 
 @media (max-width: 480px) {
+  .intro {
+    padding: 4rem 6%;
+  }
+
+  .intro-container {
+    padding-top: 1rem;
+  }
+
+  .about-header {
+    font-size: 1.6rem; /* adjust if your .main-header base size differs */
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
   .intro-vid video {
     height: 220px;
     padding-top: 1.25rem;
