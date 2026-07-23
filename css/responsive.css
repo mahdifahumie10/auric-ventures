@@ -158,33 +158,6 @@
 }
 
 
-/*SERVICES*/
-@media (max-width: 768px) {
-  .service-card {
-    flex: 0 0 calc((100% - 1.5rem) / 2); /* 2 visible on tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .service-card {
-    flex: 0 0 85%; /* 1 visible on phone */
-  }
-
-  .services-tabs {
-    gap: 1.5rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .services-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tab-btn {
-    white-space: nowrap;
-  }
-}
-
 
 /*PROJECT CARDS*/
 @media (max-width: 768px) {
@@ -539,15 +512,18 @@
 }
 
 
-
-
-
-/*BUTTONS FOR THE SERVICES*/
+/*SERVICES SECTION*/
 @media (max-width: 900px) {
-  .scroll-controls{
-    display: none;
+  .service-card {
+    flex: 0 0 80%;
   }
+
+  .serve-pills{
+    justify-content: center;
+  }
+  
 }
+
 
 /*PROJECT MODAL*/
 @media (max-width: 768px) {
@@ -684,42 +660,5 @@
 
   .footer-socials {
     justify-content: center;
-  }
-}
-
-
-/*SERVICE TABS FIX*/
-@media (max-width: 480px) {
-  .services-tabs {
-    flex-wrap: nowrap;         
-    overflow-x: auto;         
-    overflow-y: hidden;     
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none;
-    white-space: nowrap;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem; 
-  }
-
-  .services-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tab-btn {
-    flex-shrink: 0; 
-    white-space: nowrap;
-  }
-
-  .service-card h4{
-    font-size: 1rem;
-  }
-
-  .tab-btn {
-    font-size: 0.7rem;
-  }
-
-  .btn-service{
-    margin-top: 1rem;
   }
 }

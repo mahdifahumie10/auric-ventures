@@ -36,36 +36,16 @@ navToggle.addEventListener('click', () => {
 
 
 
+//NEW SERVICE SECTION 
+const track = document.getElementById("servicesTrack");
 
-//SCROLL & TAB FUNCTION - SERVICES
-const tabButtons = document.querySelectorAll('.tab-btn');
-const panels = document.querySelectorAll('.services-panel');
+document.getElementById("scrollLeft").onclick = () => {
+  track.scrollBy({ left: -350, behavior: "smooth" });
+};
 
-tabButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabButtons.forEach(b => b.classList.remove('active'));
-    panels.forEach(p => p.classList.remove('active'));
-
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
-
-// Scroll controls — one per panel
-document.querySelectorAll('.services-panel').forEach(panel => {
-  const track = panel.querySelector('.service-scroll');
-  const prevBtn = panel.querySelector('.prev');
-  const nextBtn = panel.querySelector('.next');
-  const cardWidth = () => panel.querySelector('.service-card').offsetWidth + 24; // +gap
-
-  prevBtn.addEventListener('click', () => {
-    track.scrollBy({ left: -cardWidth() * 3, behavior: 'smooth' });
-  });
-
-  nextBtn.addEventListener('click', () => {
-    track.scrollBy({ left: cardWidth() * 3, behavior: 'smooth' });
-  });
-});
+document.getElementById("scrollRight").onclick = () => {
+  track.scrollBy({ left: 350, behavior: "smooth" });
+};
 
 
 
@@ -163,6 +143,7 @@ function restartAutoScroll() {
 function stopAutoScroll() {
   clearInterval(autoScrollTimer);
 }
+
 
 //SCROLL BUTTONS FOR TIMELINE
 const processTrack = document.getElementById('processTrack');
