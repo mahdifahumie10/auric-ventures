@@ -40,7 +40,7 @@ p2 {
   left: 50%;
   transform: translate(-50%, -20px);
 
-  width: 69%;
+  width: 72%;
   max-width: 1200px;
   height: var(--nav-height);
 
@@ -87,9 +87,10 @@ p2 {
 .nav-links a {
   text-decoration: none;
   color: var(--color-dark);
-  font-family: var(--font-overline);
+  /* font-family: var(--font-overline); */
+  text-transform: uppercase;
   font-weight: bolder;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1px;
   transition: var(--transition);
 }

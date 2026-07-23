@@ -1,9 +1,8 @@
 /*NAVBAR*/
 @media (max-width: 900px) {
   .navbar {
-    /* width: 90%;
-    padding: 0 20px; */
-    display: none;
+    width: 90%;
+    padding: 0 20px;
   }
 
   .logo img {
