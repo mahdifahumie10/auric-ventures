@@ -524,6 +524,20 @@
   
 }
 
+/* Tablet (2 cards) */
+@media (max-width: 1024px) {
+  .service-card {
+    flex: 0 0 calc((100% - 1 * 1.5rem) / 2);
+  }
+}
+
+/* Mobile (1 card) */
+@media (max-width: 600px) {
+  .service-card {
+    flex: 0 0 100%;
+  }
+}
+
 
 /*PROJECT MODAL*/
 @media (max-width: 768px) {

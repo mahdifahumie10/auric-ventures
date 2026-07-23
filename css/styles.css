@@ -523,11 +523,11 @@ p2 {
 
 
 
-/*SERVICES*/
 
+/*SERVICES*/
 .services-section {
   position: relative;
-  padding: 8rem 5%;
+  padding: 6rem 5%;
   overflow: visible;
   background: var(--color-white);
 }
@@ -573,6 +573,7 @@ p2 {
   background: var(--color-accent);
   color: white;
 }
+
 .services-wrapper {
   position: relative;
 }
@@ -580,7 +581,7 @@ p2 {
 .services-track {
   display: flex;
   gap: 1.5rem;
-  overflow: hidden; /* hides scrollbar */
+  overflow: hidden; 
   scroll-behavior: smooth;
   padding: 1.5rem;
   border-radius: 10px;
@@ -589,8 +590,11 @@ p2 {
 }
 
 .service-card {
-  min-width: 300px;
-  flex: 0 0 calc(33.333% - 1rem);
+  /* min-width: 300px;
+  flex: 0 0 calc(33.333% - 1rem); */
+
+  flex: 0 0 calc((100% - 2 * 1.5rem) / 3);
+  
 
   background: var(--color-white);
   backdrop-filter: blur(10px);
@@ -603,7 +607,9 @@ p2 {
   transition: var(--transition);
 }
 
-
+.service-btn{
+  margin-top: 1rem;
+}
 
 .service-card img {
   width: 100%;

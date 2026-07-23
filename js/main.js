@@ -37,15 +37,51 @@ navToggle.addEventListener('click', () => {
 
 
 //NEW SERVICE SECTION 
+// const track = document.getElementById("servicesTrack");
+
+// document.getElementById("scrollLeft").onclick = () => {
+//   track.scrollBy({ left: -350, behavior: "smooth" });
+// };
+
+// document.getElementById("scrollRight").onclick = () => {
+//   track.scrollBy({ left: 350, behavior: "smooth" });
+// };
+
 const track = document.getElementById("servicesTrack");
+const cards = track.querySelectorAll(".service-card");
 
-document.getElementById("scrollLeft").onclick = () => {
-  track.scrollBy({ left: -350, behavior: "smooth" });
+const scrollLeftBtn = document.getElementById("scrollLeft");
+const scrollRightBtn = document.getElementById("scrollRight");
+
+// Detect how many cards are visible
+function getCardsPerView() {
+  if (window.innerWidth <= 600) return 1;
+  if (window.innerWidth <= 1024) return 2;
+  return 3;
+}
+
+// Calculate scroll distance dynamically
+function getScrollAmount() {
+  const card = cards[0];
+  const gap = 24; // must match your CSS gap (1.5rem)
+  return (card.offsetWidth + gap) * getCardsPerView();
+}
+
+// Scroll actions
+scrollLeftBtn.onclick = () => {
+  track.scrollBy({
+    left: -getScrollAmount(),
+    behavior: "smooth"
+  });
 };
 
-document.getElementById("scrollRight").onclick = () => {
-  track.scrollBy({ left: 350, behavior: "smooth" });
+scrollRightBtn.onclick = () => {
+  track.scrollBy({
+    left: getScrollAmount(),
+    behavior: "smooth"
+  });
 };
+
 
 
 
