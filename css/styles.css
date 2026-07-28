@@ -390,10 +390,10 @@ p2 {
   overflow: hidden;
   padding: 3rem 5%;
   text-align: center;
-  background-color: var(--color-light);
+  background-color: var(--color-white);
 }
 
-.emergency::after{
+/* .emergency::after{
   content: "";
   position: absolute;
   bottom: 0;
@@ -403,13 +403,14 @@ p2 {
   height: 1px;
   background: rgba(59, 59, 59, 0.12)
 
-}
+} */
 
 .emergency-container {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 50px;
   padding: 2.5rem;
   border-radius: 10px;
   background-color: var(--color-light);
@@ -450,7 +451,7 @@ p2 {
   font-style: italic;
   font-weight: 700;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
-  color: var(--color-silver);
+  color: var(--color-dark);
   margin-bottom: 1rem;
 }
 
@@ -476,7 +477,7 @@ p2 {
 .emergency-list span {
   padding: 0.5rem 1rem;
   border: 1.5px solid rgba(0, 0, 0, 0.2);
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 20px;
   font-family: var(--font-overline);
   letter-spacing: 0.15rem;
