@@ -87,9 +87,9 @@ p2 {
 .nav-links a {
   text-decoration: none;
   color: var(--color-dark);
-  font-family: var(--font-overline);
+  text-transform: uppercase;
   font-weight: bolder;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1px;
   transition: var(--transition);
 }
