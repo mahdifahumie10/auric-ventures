@@ -13,6 +13,9 @@
     transform: translateY(6px);
   }
 
+  .hero-sub{
+    font-size: 0.6rem;
+  }
   /* dropdown panel, hidden until toggled open */
   .nav-links {
     display: none;
