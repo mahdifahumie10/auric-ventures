@@ -89,6 +89,9 @@ scrollRightBtn.onclick = () => {
 const projectCards = document.querySelectorAll('.project-card');
 const modal = document.getElementById('projectModal');
 const modalClose = document.querySelector('.project-modal-close');
+const galleryPrevBtn = document.querySelector('.modal-gallery-btn.prev');
+const galleryNextBtn = document.querySelector('.modal-gallery-btn.next');
+
 
 projectCards.forEach(card => {
   card.addEventListener('click', () => {
@@ -179,6 +182,16 @@ function restartAutoScroll() {
 function stopAutoScroll() {
   clearInterval(autoScrollTimer);
 }
+galleryPrevBtn.addEventListener('click', () => {
+  const prevIndex = (currentSlide - 1 + galleryImages.length) % galleryImages.length;
+  goToSlide(prevIndex);
+});
+
+galleryNextBtn.addEventListener('click', () => {
+  const nextIndex = (currentSlide + 1) % galleryImages.length;
+  goToSlide(nextIndex);
+});
+
 
 
 //SCROLL BUTTONS FOR TIMELINE

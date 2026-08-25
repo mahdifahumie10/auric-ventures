@@ -99,4 +99,5 @@
   line-height: 1.9;
   color: var(--color-silver);
   max-width: 46ch;
+  text-align: justify;
 }

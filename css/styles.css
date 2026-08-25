@@ -324,7 +324,7 @@ p2 {
 .intro-vid video {
   padding-top: 2rem;
   width: 500px;
-  height: 400px;
+  height: 500px;
   /* max-height: 500px; */
   object-fit: cover;
   border-radius: 4px;
@@ -363,6 +363,7 @@ p2 {
   color: var(--color-dark);
   margin-bottom: 1.1rem;
   padding-bottom: 1rem;
+  text-align: justify;
 }
 
 .pillar h3::after {
@@ -628,6 +629,7 @@ p2 {
   font-size: 0.9rem;
   color: var(--color-silver);
   line-height: 1.6;
+  
 }
 
 .service-card:hover {
@@ -710,8 +712,9 @@ p2 {
 
 /* GRID */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -939,6 +942,40 @@ p2 {
 .modal-gallery {
   overflow: hidden; /* auto-scroll only, no manual drag needed */
   border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.modal-gallery-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0 0;
+}
+
+.modal-gallery-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 155, 60, 0.4);
+  background: transparent;
+  color: var(--color-dark);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.modal-gallery-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.modal-gallery-btn.prev {
+  left: 1rem;
+}
+
+.modal-gallery-btn.next {
+  right: 1rem;
 }
 
 .modal-gallery-track {
@@ -957,7 +994,6 @@ p2 {
   display: flex;
   justify-content: center;
   gap: 8px;
-  padding: 1rem 0 0;
 }
 
 .modal-gallery-dots span {
@@ -1460,13 +1496,16 @@ p2 {
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .team-card {
   text-align: center;
+  justify-content: center;
+  width: 220px;
 }
 
 .team-card-img {
@@ -1564,6 +1603,7 @@ p2 {
   align-items: start;
 }
 
+
 .btn-form:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -1596,8 +1636,9 @@ p2 {
 
 
 .testimonial-slide img {
+  margin-top: 3.5rem;
   width: 456px;
-  height: 256px;
+  height: 456px;
   border-radius: 10%;
   object-fit: cover;
   margin-bottom: 1.25rem;
