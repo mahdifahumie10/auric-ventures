@@ -1,17 +1,36 @@
 @media (max-width: 900px) {
   .navbar {
-    /* remove the floating pill entirely */
     position: fixed;
     top: 0;
     left: 0;
-    transform: none;
     width: 100%;
+    max-width: none;
+    height: var(--nav-height);
+
+    /* hidden state — starts off-screen above, not shifted sideways */
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+
     border-radius: 0;
-    box-shadow: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     background: rgba(224, 224, 224, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+
     padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+  }
+
+  /* fully visible once scrolled */
+  .navbar.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .logo img {
@@ -26,11 +45,10 @@
     font-size: 0.6rem;
   }
 
-  /* dropdown panel, hidden until toggled open */
   .nav-links {
     display: none;
     position: absolute;
-    top: var(--nav-height); /* sits directly below the now full-width bar */
+    top: var(--nav-height);
     left: 0;
     width: 100%;
     flex-direction: column;
@@ -39,7 +57,7 @@
     background: rgba(224, 224, 224, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 0 0 16px 16px; /* rounded only at the bottom, since it's now a dropdown extension of a square bar */
+    border-radius: 0 0 16px 16px;
     padding: 24px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   }
@@ -90,7 +108,6 @@
     transform: translateY(-7px) rotate(-45deg);
   }
 }
-
 
 /*NAVBAR*
 @media (max-width: 900px) {
