@@ -89,9 +89,10 @@ p2 {
   color: var(--color-dark);
   text-transform: uppercase;
   font-weight: bolder;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 1px;
   transition: var(--transition);
+  font-family: var(--font-overline);
 }
 
 .btn-desktop-only{

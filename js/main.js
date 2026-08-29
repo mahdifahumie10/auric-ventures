@@ -152,7 +152,7 @@ function buildGallery(images) {
     dotsContainer.appendChild(dot);
   });
 
-  startAutoScroll();
+  // startAutoScroll();
 }
 
 function goToSlide(index) {
