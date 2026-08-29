@@ -1,4 +1,4 @@
-/*NAVBAR*/
+/*NAVBAR
 @media (max-width: 900px) {
   .navbar {
     width: 90%;
@@ -16,7 +16,7 @@
   .hero-sub{
     font-size: 0.6rem;
   }
-  /* dropdown panel, hidden until toggled open */
+  /* dropdown panel, hidden until toggled open *
   .nav-links {
     display: none;
     position: absolute;
@@ -38,12 +38,12 @@
     display: flex;
   }
 
-  /* standalone desktop quote button hides on mobile */
+  /* standalone desktop quote button hides on mobile *
   .btn-desktop-only {
     display: none;
   }
 
-  /* dropdown version shows instead, as the last item */
+  /* dropdown version shows instead, as the last item 
   .nav-links-btn {
     display: block;
     margin-top: 8px;
@@ -53,7 +53,7 @@
     padding: 10px 24px;
   }
 
-  /* hamburger icon */
+  /* hamburger icon *
   .nav-toggle {
     display: block;
     background: none;
@@ -83,6 +83,112 @@
     transform: translateY(-7px) rotate(-45deg);
   }
 }
+*/
+
+@media (max-width: 900px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    height: var(--nav-height);
+    padding: 0 20px;
+
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  }
+
+  /* background only appears once the page is scrolled */
+  .navbar.scrolled {
+    background: rgba(224, 224, 224, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  .logo {
+    transform: translateY(6px);
+  }
+
+  .hero-sub {
+    font-size: 0.6rem;
+  }
+
+  /* dropdown panel, hidden until toggled open */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(224, 224, 224, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 0 16px 16px;
+    padding: 24px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .btn-desktop-only {
+    display: none;
+  }
+
+  .nav-links-btn {
+    display: block;
+    margin-top: 8px;
+  }
+
+  .nav-links-btn .btn {
+    padding: 10px 24px;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-dark);
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
 
 
 /*ABOUT US*/
